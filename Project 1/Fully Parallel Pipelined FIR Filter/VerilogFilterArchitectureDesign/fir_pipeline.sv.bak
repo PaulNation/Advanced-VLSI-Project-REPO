@@ -1,0 +1,91 @@
+module fir_pipeline #(
+  parameter DATA_WIDTH = 16,
+  parameter TAPS = 8  // Must be a power of 2 for simplicity
+)(
+  input                     clk,
+  input                     reset,
+  input  signed [DATA_WIDTH-1:0] x,
+  output reg signed [DATA_WIDTH-1:0] y
+);
+
+  integer i;
+  
+  // Delay line registers for the input samples
+  reg signed [DATA_WIDTH-1:0] delay_line [0:TAPS-1];
+  
+  // Multiplication results: width = DATA_WIDTH*2
+  reg signed [2*DATA_WIDTH-1:0] mult_results [0:TAPS-1];
+  
+  // Pipeline registers for the adder tree
+  reg signed [2*DATA_WIDTH:0] stage1 [0:TAPS/2-1];
+  reg signed [2*DATA_WIDTH+1:0] stage2 [0:TAPS/4-1];
+  reg signed [2*DATA_WIDTH+2:0] stage3;
+  
+  // Coefficient array (example constants)
+  localparam signed [DATA_WIDTH-1:0] coeffs [0:TAPS-1] = {
+    16'h1234, 16'h2345, 16'h3456, 16'h4567,
+    16'h5678, 16'h6789, 16'h789A, 16'h89AB
+  };
+
+  // Delay line update
+  always @(posedge clk or posedge reset) begin
+    if (reset) begin
+      for (i = 0; i < TAPS; i = i + 1)
+        delay_line[i] <= 0;
+    end else begin
+      delay_line[0] <= x;
+      for (i = 1; i < TAPS; i = i + 1)
+        delay_line[i] <= delay_line[i-1];
+    end
+  end
+
+  // Multiply each tap
+  always @(posedge clk or posedge reset) begin
+    if (reset) begin
+      for (i = 0; i < TAPS; i = i + 1)
+        mult_results[i] <= 0;
+    end else begin
+      for (i = 0; i < TAPS; i = i + 1)
+        mult_results[i] <= coeffs[i] * delay_line[i];
+    end
+  end
+
+  // Pipeline adder tree: Stage 1 (pairwise addition)
+  always @(posedge clk or posedge reset) begin
+    if (reset) begin
+      for (i = 0; i < TAPS/2; i = i + 1)
+        stage1[i] <= 0;
+    end else begin
+      for (i = 0; i < TAPS/2; i = i + 1)
+        stage1[i] <= mult_results[2*i] + mult_results[2*i+1];
+    end
+  end
+
+  // Pipeline adder tree: Stage 2
+  always @(posedge clk or posedge reset) begin
+    if (reset) begin
+      for (i = 0; i < TAPS/4; i = i + 1)
+        stage2[i] <= 0;
+    end else begin
+      for (i = 0; i < TAPS/4; i = i + 1)
+        stage2[i] <= stage1[2*i] + stage1[2*i+1];
+    end
+  end
+
+  // Pipeline adder tree: Stage 3 (final addition)
+  always @(posedge clk or posedge reset) begin
+    if (reset)
+      stage3 <= 0;
+    else
+      stage3 <= stage2[0] + stage2[1];
+  end
+
+  // Output assignment (here simply truncating the result)
+  always @(posedge clk or posedge reset) begin
+    if (reset)
+      y <= 0;
+    else
+      y <= stage3[DATA_WIDTH-1:0];
+  end
+
+endmodule
