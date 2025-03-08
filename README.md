@@ -1,31 +1,41 @@
 # Advanced VLSI Project Repository
 
-This repository contains the source code, design files, and scripts for an advanced VLSI project focused on implementing FIR filter architectures with reduced-complexity parallel processing techniques.
+This repository contains the source code, design files, and scripts for an advanced VLSI projects focused on implementing FIR filter architectures with reduced-complexity parallel processing techniques.
 
 ## Repository Structure
 
-- **Project 1: Filter Architectures**
+- **Project 1: Filter Architectures (102 Taps)**
+  - **Fully Pipelined FIR Filter**
+    - Contains Verilog designs, test benches, and simulation scripts for a Fully Pipelined FIR Filter
   - **Reduced-complexity parallel processing L=2**
     - Contains Verilog designs, test benches, and simulation scripts for a two-level parallel processing FIR filter.
-    - Includes a dedicated `VerilogFilterArchitectureDesign` folder with design files and output reports.
+    - Also includes Python scripts for doing polyphase decomposition processing and generating taps parameters.
   - **Reduced-complexity parallel processing L=3**
     - Similar structure as L=2, but for a three-level implementation.
-    - Also includes Python scripts for processing coefficients and generating simulation parameters.
+    - Also includes Python scripts for doing polyphase decomposition processing and generating taps parameters.
+  - **Reduced-complexity parallel processing L=3 and Fully Pipelined**
+    - Copies the coeficients from the Reduced-complexity parallel processing L=3 Design
   - **Unquantized Coefs Comparison**
     - Contains MATLAB scripts for frequency graph comparisons.
     - Python scripts and header files for handling unquantized coefficients.
+  - **Noisy Sine Input Generator**
+    - Contains MATLAB scripts for Noisy 1 kHz Sinewave in unsigned 16 bit representation for test bench input
+    - Outputs graph comparisons between noisy and non-noisy sinewave
+
 
 ## Key Components
 
 - **Verilog Design Files**
-  - Multiple levels of parallel processing designs (L=2, L=3) implemented in SystemVerilog.
+  - Multiple levels of pipelined and parallel processing designs (L=2, L=3) implemented in SystemVerilog.
   - Test bench files to validate the filter functionality.
   
 - **Python Scripts**
-  - Scripts for generating and processing filter coefficients.
-  - Tools for quantization and comparison of coefficients.
+  - Scripts for processing filter coefficients.
+  - Tools for quantization of coefficients.
+  - Tools for Polyphase Decomposition
   
 - **MATLAB Scripts**
+  - Mainly used to generate filter coefficients.
   - Used for comparing unquantized and quantized coefficients through graphical analysis.
   
 - **Output Files and Databases**
@@ -34,11 +44,10 @@ This repository contains the source code, design files, and scripts for an advan
 ## Getting Started
 
 1. **Simulation and Synthesis:**
-   - Use your preferred Verilog simulator to run the test benches provided in the respective project folders.
-   - Synthesis tools may be required to work with the design databases and reports.
+   - Use your preferred Verilog simulator to run the test benches provided in the respective project folders. (I used ModelSim-Altera)
 
 2. **Python Scripts:**
-   - Navigate to the corresponding Python Scripts directory (found in both L=3 and Unquantized Coefs Comparison folders) to process filter coefficients.
+   - Navigate to the corresponding Python Scripts directory (found in L=3,L=2,Pipelined, and Unquantized Coefs Comparison folders) to process filter coefficients if they are not already downloaded.
    - Ensure you have the necessary Python environment configured.
 
 3. **MATLAB Analysis:**
