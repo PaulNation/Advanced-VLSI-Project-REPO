@@ -1,65 +1,56 @@
-# Advanced-VLSI-Project-REPO - FIR Filter Design & Implementation - Course Project
+# Advanced VLSI Project Repository
 
-Project 1 and Final Open-Ended Design Project are stored here
-
-## Project Overview
-This project involves designing a 100-tap low-pass FIR filter with a transition band of **0.2π to 0.23π rad/sample** and **≥80 dB stopband attenuation**. The filter is implemented in hardware using Verilog, with architectures exploring pipelining and parallel processing. The design process leverages MATLAB for coefficient generation and quantization, followed by HDL code generation and FPGA synthesis.
-
----
+This repository contains the source code, design files, and scripts for an advanced VLSI project focused on implementing FIR filter architectures with reduced-complexity parallel processing techniques.
 
 ## Repository Structure
 
----
+- **Project 1: Filter Architectures**
+  - **Reduced-complexity parallel processing L=2**
+    - Contains Verilog designs, test benches, and simulation scripts for a two-level parallel processing FIR filter.
+    - Includes a dedicated `VerilogFilterArchitectureDesign` folder with design files and output reports.
+  - **Reduced-complexity parallel processing L=3**
+    - Similar structure as L=2, but for a three-level implementation.
+    - Also includes Python scripts for processing coefficients and generating simulation parameters.
+  - **Unquantized Coefs Comparison**
+    - Contains MATLAB scripts for frequency graph comparisons.
+    - Python scripts and header files for handling unquantized coefficients.
 
-## Key Sections
+## Key Components
 
-### 1. MATLAB Design & Verilog Structure (20%)
-- **MATLAB Workflow**:  
-  The script `genHDL.m` uses `fdesign.lowpass` to design an equiripple FIR filter. Coefficients are quantized to **14-bit signed fixed-point (13 fractional bits)**. HDL Coder generates a fully parallel, pipelined Verilog implementation with a processor interface for dynamic coefficient updates.
-- **Verilog Architecture**:  
-  - **Direct-Form FIR** with 100 taps.
-  - **Shadow registers** for glitch-free coefficient updates.
-  - **Pipelined multipliers and adders** to meet timing constraints.
+- **Verilog Design Files**
+  - Multiple levels of parallel processing designs (L=2, L=3) implemented in SystemVerilog.
+  - Test bench files to validate the filter functionality.
+  
+- **Python Scripts**
+  - Scripts for generating and processing filter coefficients.
+  - Tools for quantization and comparison of coefficients.
+  
+- **MATLAB Scripts**
+  - Used for comparing unquantized and quantized coefficients through graphical analysis.
+  
+- **Output Files and Databases**
+  - Design and synthesis reports, along with incremental database files generated during the design process.
 
-### 2. Frequency Response & Quantization (20%)
-- **Frequency Response**:  
-  ![Frequency Response](Documentation/Frequency_Response.png)  
-  - **Original vs. Quantized**: Quantization introduces minor stopband ripple but maintains >80 dB attenuation.
-  - **Mitigation**: Extended accumulator width (35 bits) prevents overflow during summation.
+## Getting Started
 
-### 3. Filter Architecture (20%)
-- **Pipelining**:  
-  - Delay pipeline registers for input samples.
-  - Registered output to break critical paths.
-- **Parallel Processing**:  
-  - *Not implemented in current version* (see `genHDL.m` for baseline). Future work includes L=2/L=3 folding.
+1. **Simulation and Synthesis:**
+   - Use your preferred Verilog simulator to run the test benches provided in the respective project folders.
+   - Synthesis tools may be required to work with the design databases and reports.
 
-### 4. Hardware Results (20%)
-- **Synthesis (Xilinx Vivado)**:  
-  - **Area**: 620 LUTs, 850 FFs  
-  - **Max Clock**: 250 MHz  
-  - **Power**: 18 mW @ 100 MHz  
-- **Comparison**: Pipelining improved Fmax by 35% vs. non-pipelined version.
+2. **Python Scripts:**
+   - Navigate to the corresponding Python Scripts directory (found in both L=3 and Unquantized Coefs Comparison folders) to process filter coefficients.
+   - Ensure you have the necessary Python environment configured.
 
-### 5. Analysis & Conclusion (20%)
-- **Quantization Impact**: 14-bit coefficients balance precision and resource usage. Stopband meets specs despite minor degradation.
-- **Scalability**: Parallel architectures (L=3) reduce latency but increase area; pipelining is critical for high-speed designs.
-- **Future Work**: Explore time-multiplexed architectures for area-efficient implementations.
+3. **MATLAB Analysis:**
+   - Open MATLAB and run the provided scripts in the Unquantized Coefs Comparison/MATLAB folder to visualize the frequency response and compare coefficients.
 
----
+## Prerequisites
 
-## Setup & Reproduction
-### Tools
-- MATLAB R2024a + Filter Design HDL Coder
-- Xilinx Vivado 2023.1 (for synthesis)
-- Icarus Verilog (for simulation)
+- **Verilog/SystemVerilog Simulator:** For simulation of the FIR filter designs.
+- **Synthesis Tools:** Such as Quartus or Vivado, if synthesis is required.
+- **Python 3.x:** Along with necessary libraries (e.g., NumPy) for running the coefficient scripts.
+- **MATLAB:** For executing the analysis scripts.
 
-### Steps
-1. Run `genHDL.m` to generate coefficients and Verilog code.
-2. Simulate with `FilterProgrammable_tb.v`.
-3. Synthesize using Vivado with target FPGA (e.g., Artix-7).
-
----
 
 ## GitHub as a Portfolio
 This repository is structured to showcase:
@@ -67,5 +58,5 @@ This repository is structured to showcase:
 - **Modular Code**: Parameterized Verilog for scalability.
 - **Professionalism**: Concise explanations, adherence to specs, and critical analysis.
 
-🔗 **Live Demo**: [GitHub Pages](https://github.com/yourusername/Advanced-VLSI-Project-REPO)  
-📧 **Contact**: your.email@university.edu
+🔗 **Live Demo**: [GitHub Pages](https://github.com/PaulNation/Advanced-VLSI-Project-REPO)  
+📧 **Contact**: nievep@rpi.edu
