@@ -1,0 +1,16 @@
+module FIR_Filter_L2_Top 
+#(
+    parameter DATA_IN_WIDTH  = 16,
+    parameter DATA_OUT_WIDTH = 64,
+    parameter TAP_WIDTH      = 32,
+    parameter TAP_COUNT      = 128
+)
+(
+    input wire                               clk,
+    input wire                               reset_n,
+    input wire   signed [DATA_IN_WIDTH-1:0]  data_in,
+    output reg   signed [DATA_OUT_WIDTH-1:0] data_out
+);
+
+
+endmodule
