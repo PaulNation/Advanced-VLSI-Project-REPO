@@ -158,5 +158,6 @@ This repository is structured to showcase:
 - **Modular Code:** Scalable, parameterized Verilog designs.
 - **Professional Analysis:** A critical evaluation of performance metrics and hardware implementation results.
 
-🔗 **Live Demo:** [GitHub Pages](https://github.com/PaulNation/Advanced-VLSI-Project-REPO)  
+🔗 **Live Demo:** [GitHub Pages](https://github.com/PaulNation/Advanced-VLSI-Project-REPO)   
+🌐 **Website:** [paulnieves.com](https://paulnieves.com)   
 📧 **Contact:** nievep@rpi.edu
