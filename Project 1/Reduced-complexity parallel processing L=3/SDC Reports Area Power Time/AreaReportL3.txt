@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : FIR_Filter_L3_Top
+Version: W-2024.09-SP2
+Date   : Sun Mar  9 22:29:59 2025
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    gscl45nm (File: /home/chome/nievep/Desktop/Synopsys Design Compiler/Advanced-VLSI-Project-REPO-main/Project 1/src/gscl45nm.db)
+
+Number of ports:                         1660
+Number of nets:                          2596
+Number of cells:                         1611
+Number of combinational cells:            692
+Number of sequential cells:               256
+Number of macros/black boxes:               0
+Number of buf/inv:                        450
+Number of references:                      15
+
+Combinational area:               2980.993658
+Buf/Inv area:                      874.775175
+Noncombinational area:            2643.097656
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  5624.091314
+Total area:                 undefined

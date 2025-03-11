@@ -11,80 +11,106 @@ cModel Technology
 dC:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3/VerilogFilterArchitectureDesign
 vcounter
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 !s110 1741401034
+Z1 !s110 1741624729
 !i10b 1
 !s100 7hYf6Glh3:5]FT]cjk?`J2
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I7[O58Ng<3MeaD_fI6G7jY2
+InXQWT@2ReO29FoWZ1CfUa3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 S1
-Z4 dC:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign
+Z4 dC:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign
 w1740633564
-8C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/counter.sv
-FC:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/counter.sv
-!i122 0
+8C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/counter.sv
+FC:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/counter.sv
+!i122 5
 L0 1 26
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1741401033.000000
-!s107 C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/counter.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/counter.sv|
+Z6 !s108 1741624729.000000
+!s107 C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/counter.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/counter.sv|
 !i113 1
-Z6 o-work work -sv
-Z7 tCvgOpt 0
-vFIR_Filter_L3_Top
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vFIR_Filter_L3_Pipelined_Top
 R0
 R1
+!i10b 1
+!s100 mIK09=4CL3akG3Z@=l2`i1
+R2
+I7ACm1]]A9A6HgYngVde6Z1
+R3
+S1
+R4
+w1741442566
+8C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/FIR_Filter_L3_Pipelined_Top.sv
+FC:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/FIR_Filter_L3_Pipelined_Top.sv
+!i122 6
+Z9 L0 1 67
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/FIR_Filter_L3_Pipelined_Top.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/FIR_Filter_L3_Pipelined_Top.sv|
+!i113 1
+R7
+R8
+n@f@i@r_@filter_@l3_@pipelined_@top
+vFIR_Filter_L3_Top
+R0
+!s110 1741401034
 !i10b 1
 !s100 J?A6cPzHDh0BmlFGHJB5z2
 R2
 IWo@<L?2hWA8Jm4VcR9m181
 R3
 S1
-R4
+dC:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign
 w1741400843
 8C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/FIR_Filter_L3_Pipelined_Top.sv
 FC:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/FIR_Filter_L3_Pipelined_Top.sv
 !i122 1
-L0 1 67
+R9
 R5
 r1
 !s85 0
 31
-Z8 !s108 1741401034.000000
+!s108 1741401034.000000
 !s107 C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/FIR_Filter_L3_Pipelined_Top.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/FIR_Filter_L3_Pipelined_Top.sv|
 !i113 1
-R6
 R7
+R8
 n@f@i@r_@filter_@l3_@top
 vFIR_Filter_tb
 R0
 R1
 !i10b 1
-!s100 A:IPkXB=56`ibPSl114?92
+!s100 8EPoe_[[F`4dmLNMRJP6B1
 R2
-IZEeoO6ZiC:7Yi910g4K_B3
+IP]O`LNN<fYj0o5PZG]9D>1
 R3
 S1
 R4
-w1741398482
-8C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/FIR_Filter_tb.sv
-FC:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/FIR_Filter_tb.sv
-!i122 2
+w1741442580
+8C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/FIR_Filter_tb.sv
+FC:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/FIR_Filter_tb.sv
+!i122 7
 L0 2 84
 R5
 r1
 !s85 0
 31
-R8
-!s107 C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/FIR_Filter_tb.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/FIR_Filter_tb.sv|
-!i113 1
 R6
+!s107 C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/FIR_Filter_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/FIR_Filter_tb.sv|
+!i113 1
 R7
+R8
 n@f@i@r_@filter_tb
 vfir_pipeline
 R0
@@ -92,48 +118,48 @@ R1
 !i10b 1
 !s100 HPlSKGfBb[_T>_@TgPV?o0
 R2
-I^GkS6i4WBIZ890M0[aTP90
+Ih;Sz=CN:[TFiFGX8aFzY43
 R3
 S1
 R4
 w1741400909
-8C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/fir_pipeline.sv
-FC:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/fir_pipeline.sv
-!i122 3
+8C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/fir_pipeline.sv
+FC:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/fir_pipeline.sv
+!i122 8
 L0 1 86
 R5
 r1
 !s85 0
 31
-R8
-!s107 C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/fir_pipeline.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/fir_pipeline.sv|
-!i113 1
 R6
+!s107 C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/fir_pipeline.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/fir_pipeline.sv|
+!i113 1
 R7
+R8
 vSineWave
 R0
 R1
 !i10b 1
 !s100 da5T>QHR_RC2A:0^SkPDY2
 R2
-IRbU793PWagQog;Bm1DXEN3
+I^Ded2h[^nj2:D8zCZT:M_3
 R3
 S1
 R4
 w1741398742
-8C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/SineWave.sv
-FC:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/SineWave.sv
-!i122 4
+8C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/SineWave.sv
+FC:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/SineWave.sv
+!i122 9
 L0 1 20
 R5
 r1
 !s85 0
 31
-R8
-!s107 C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/SineWave.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel processing L=3 and Fully Pipelined/VerilogFilterArchitectureDesign/SineWave.sv|
-!i113 1
 R6
+!s107 C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/SineWave.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/nievep/Downloads/Advanced VLSI Design/Projects/REPO/Advanced-VLSI-Project-REPO/Project 1/Reduced-complexity parallel L3 Fully Piped/VerilogFilterArchitectureDesign/SineWave.sv|
+!i113 1
 R7
+R8
 n@sine@wave

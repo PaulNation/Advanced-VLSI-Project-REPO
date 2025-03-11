@@ -1,0 +1,59 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fir_pipeline
+Version: W-2024.09-SP2
+Date   : Sun Mar  9 21:45:25 2025
+****************************************
+
+
+Library(s) Used:
+
+    gscl45nm (File: /home/chome/nievep/Desktop/Synopsys Design Compiler/Advanced-VLSI-Project-REPO-main/Project 1/src/gscl45nm.db)
+
+Information: The cells in your design are not characterized for internal power. (PWR-229)
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   0.0000 mW        
+  Net Switching Power  =   0.0000 mW        
+                         ---------
+Total Dynamic Power    =   0.0000 mW        
+
+Cell Leakage Power     =   8.2155 uW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.0000            0.0000        6.9512e+03        6.9512e-03  (  84.61%)
+combinational      0.0000            0.0000        1.2642e+03        1.2642e-03  (  15.39%)
+--------------------------------------------------------------------------------------------------
+Total              0.0000 mW         0.0000 mW     8.2155e+03 nW     8.2155e-03 mW
