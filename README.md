@@ -5,8 +5,7 @@ This repository contains the source code, design files, and scripts for an advan
 ---
 
 ## Abstract
-
-This project demonstrates the design and implementation of a 102-tap low‐pass FIR filter. The design removes noise from a 1 kHz sine wave while meeting stringent specifications (a transition region between 0.2π and 0.23π rad/sample and at least 80 dB stopband attenuation). A combination of MATLAB, Python, and Verilog is used to develop and analyze multiple architectures—including traditional, pipelined, and parallel processing approaches—to achieve high performance on FPGA hardware.
+This Project demonstrates the design and implementation of a 102-tap low‐pass FIR filter. The design removes noise from a 1 kHz sine wave while meeting stringent specifications (a transition region between 0.2π and 0.23π rad/sample and at least 80 dB stopband attenuation). A combination of MATLAB, Python, and Verilog is used to develop and analyze multiple architectures—including traditional, pipelined, and parallel processing approaches—to achieve high performance on FPGA hardware.
 
 ---
 
@@ -82,6 +81,26 @@ This section summarizes the key performance metrics and simulation outcomes:
   
 - **Simulation Validation:**  
   Simulation results confirm that the FIR filter effectively removes noise from the input sine wave while maintaining the required frequency response. Test bench outputs (graphs and waveform captures) validate that quantization effects remain minimal and the filter meets the design specifications.
+
+<figure style="background-color: white; display: inline-block; padding: 10px;">
+  <img src="Project_1/REPO_images/FIR_Pipelined_Results.png" alt="FIR Pipelined Results">
+  <figcaption>Figure: FIR Pipelined Results</figcaption>
+</figure>
+
+<figure style="background-color: white; display: inline-block; padding: 10px;">
+  <img src="Project_1/REPO_images/FIR_L2_Results.png" alt="FIR L2 Results">
+  <figcaption>Figure: L=2 Parallel Processing Results</figcaption>
+</figure>
+
+<figure style="background-color: white; display: inline-block; padding: 10px;">
+  <img src="Project_1/REPO_images/FIR_L3_Results.png" alt="FIR L3 Results">
+  <figcaption>Figure: L=3 Parallel Processing Results</figcaption>
+</figure>
+
+<figure style="background-color: white; display: inline-block; padding: 10px;">
+  <img src="Project_1/REPO_images/FIR_L3_Pipeline_Results.png" alt="FIR L3 Pipeline Results">
+  <figcaption>Figure: Combined Pipelined & L=3 Results</figcaption>
+</figure>
 
 - **Design Trade-offs:**  
   The project demonstrates the balance between performance and complexity. While the L=3 parallel architecture (especially when combined with pipelining) offers significant throughput improvements, it incurs higher area and power costs compared to the basic pipelined approach.
