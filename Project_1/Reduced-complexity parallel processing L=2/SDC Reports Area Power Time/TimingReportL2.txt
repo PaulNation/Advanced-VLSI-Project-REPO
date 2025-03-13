@@ -1,0 +1,86 @@
+report_timing -max_paths 1 -path_type full -delay_type max
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date              : Thu Mar 13 15:21:42 2025
+| Host              : DESKTOP-Q54A5VT running 64-bit major release  (build 9200)
+| Command           : report_timing -max_paths 1 -path_type full -delay_type max
+| Design            : FIR_Filter_L2_Top
+| Device            : xczu7cg-ffvf1517
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             21168.154ns  (required time - arrival time)
+  Source:                 H0/data_out_reg[16]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10638.000ns period=21276.000ns})
+  Destination:            data_out_2[49]
+                            (output port clocked by clk  {rise@0.000ns fall@10638.000ns period=21276.000ns})
+  Path Group:             clk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            21276.000ns  (clk rise@21276.000ns - clk rise@0.000ns)
+  Data Path Delay:        6.174ns  (logic 1.351ns (21.886%)  route 4.822ns (78.114%))
+  Logic Levels:           7  (CARRY8=5 LUT3=1 OBUF=1)
+  Output Delay:           100.000ns
+  Clock Path Skew:        -1.637ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 21276.000 - 21276.000 ) 
+    Source Clock Delay      (SCD):    1.637ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                         propagated clock network latency
+                                                      1.637     1.637    
+    SLICE_X69Y260        FDCE                         0.000     1.637 r  H0/data_out_reg[16]/C
+    SLICE_X69Y260        FDCE (Prop_AFF_SLICEL_C_Q)
+                                                      0.079     1.716 f  H0/data_out_reg[16]/Q
+                         net (fo=5, routed)           1.086     2.802    H1/data_out_reg_0[16]
+    SLICE_X66Y260        LUT3 (Prop_A5LUT_SLICEL_I1_O)
+                                                      0.100     2.902 r  H1/data_out_2_OBUF[23]_inst_i_8/O
+                         net (fo=2, routed)           1.217     4.119    H1/data_out_2_OBUF[23]_inst_i_8_n_0
+    SLICE_X66Y260        CARRY8 (Prop_CARRY8_SLICEL_DI[1]_CO[7])
+                                                      0.117     4.236 r  H1/data_out_2_OBUF[23]_inst_i_1/CO[7]
+                         net (fo=1, routed)           0.026     4.262    H1/data_out_2_OBUF[23]_inst_i_1_n_0
+    SLICE_X66Y261        CARRY8 (Prop_CARRY8_SLICEL_CI_CO[7])
+                                                      0.015     4.277 r  H1/data_out_2_OBUF[31]_inst_i_1/CO[7]
+                         net (fo=1, routed)           0.026     4.303    H1/data_out_2_OBUF[31]_inst_i_1_n_0
+    SLICE_X66Y262        CARRY8 (Prop_CARRY8_SLICEL_CI_CO[7])
+                                                      0.015     4.318 r  H1/data_out_2_OBUF[39]_inst_i_1/CO[7]
+                         net (fo=1, routed)           0.026     4.344    H1/data_out_2_OBUF[39]_inst_i_1_n_0
+    SLICE_X66Y263        CARRY8 (Prop_CARRY8_SLICEL_CI_CO[7])
+                                                      0.015     4.359 r  H1/data_out_2_OBUF[47]_inst_i_1/CO[7]
+                         net (fo=1, routed)           0.026     4.385    H1/data_out_2_OBUF[47]_inst_i_1_n_0
+    SLICE_X66Y264        CARRY8 (Prop_CARRY8_SLICEL_CI_O[1])
+                                                      0.076     4.461 r  H1/data_out_2_OBUF[55]_inst_i_1/O[1]
+                         net (fo=1, routed)           2.415     6.876    data_out_2_OBUF[49]
+    B24                  OBUF (Prop_OUTBUF_HPIOB_S_I_O)
+                                                      0.934     7.810 r  data_out_2_OBUF[49]_inst/O
+                         net (fo=0)                   0.000     7.810    data_out_2[49]
+    B24                                                               r  data_out_2[49] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)    21276.000 21276.000 r  
+                         propagated clock network latency
+                                                      0.000 21276.000    
+                         clock pessimism              0.000 21276.000    
+                         clock uncertainty           -0.035 21275.965    
+                         output delay              -100.000 21175.965    
+  -------------------------------------------------------------------
+                         required time                      21175.965    
+                         arrival time                          -7.810    
+  -------------------------------------------------------------------
+                         slack                              21168.154    
+
+

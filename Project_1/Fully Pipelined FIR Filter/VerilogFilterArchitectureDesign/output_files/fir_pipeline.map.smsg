@@ -1,1 +1,0 @@
-Warning (10268): Verilog HDL information at fir_pipeline.sv(39): always construct contains both blocking and non-blocking assignments File: C:/Users/nievep/Downloads/Advanced VLSI Design/Project 1/REPO/Advanced-VLSI-Project-REPO/Project 1/Fully Parallel Pipelined FIR Filter/VerilogFilterArchitectureDesign/fir_pipeline.sv Line: 39

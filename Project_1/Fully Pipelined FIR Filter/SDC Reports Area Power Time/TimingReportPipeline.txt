@@ -1,0 +1,66 @@
+report_timing -max_paths 1 -path_type full -delay_type max
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date              : Thu Mar 13 14:30:36 2025
+| Host              : DESKTOP-Q54A5VT running 64-bit major release  (build 9200)
+| Command           : report_timing -max_paths 1 -path_type full -delay_type max
+| Design            : fir_pipeline
+| Device            : xczu7cg-ffvf1517
+| Speed File        : -2  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             21170.400ns  (required time - arrival time)
+  Source:                 data_out_reg[45]/C
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@10638.000ns period=21276.000ns})
+  Destination:            data_out[45]
+                            (output port clocked by clk  {rise@0.000ns fall@10638.000ns period=21276.000ns})
+  Path Group:             clk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            21276.000ns  (clk rise@21276.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.085ns  (logic 1.026ns (33.256%)  route 2.059ns (66.744%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           100.000ns
+  Clock Path Skew:        -2.479ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 21276.000 - 21276.000 ) 
+    Source Clock Delay      (SCD):    2.479ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                         propagated clock network latency
+                                                      2.479     2.479    
+    SLICE_X66Y329        FDCE                         0.000     2.479 r  data_out_reg[45]/C
+    SLICE_X66Y329        FDCE (Prop_FFF_SLICEL_C_Q)
+                                                      0.079     2.558 r  data_out_reg[45]/Q
+                         net (fo=2, routed)           2.059     4.617    data_out_OBUF[45]
+    B26                  OBUF (Prop_OUTBUF_HPIOB_S_I_O)
+                                                      0.947     5.564 r  data_out_OBUF[45]_inst/O
+                         net (fo=0)                   0.000     5.564    data_out[45]
+    B26                                                               r  data_out[45] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)    21276.000 21276.000 r  
+                         propagated clock network latency
+                                                      0.000 21276.000    
+                         clock pessimism              0.000 21276.000    
+                         clock uncertainty           -0.035 21275.965    
+                         output delay              -100.000 21175.965    
+  -------------------------------------------------------------------
+                         required time                      21175.965    
+                         arrival time                          -5.564    
+  -------------------------------------------------------------------
+                         slack                              21170.400    
