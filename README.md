@@ -63,7 +63,26 @@ The FIR filter designs were synthesized using Synopsys Design Compiler targeting
   - **L=2 Parallel Processing:** ~1,763 cell units.
   - **L=3 Parallel Processing:** ~5,624 cell units.
   - **Combined Pipelined & L=3:** ~13,831 cell units.
-- **Clock Frequency:** Explicit values were not provided due to undefined clock warnings; however, design improvements aim for higher frequencies suitable for real-time filtering.
+- **Clock Frequency and Timing Summary:**
+  - All architectures were synthesized with a defined clock period of **21276.000 ns**, which corresponds to an effective clock frequency of approximately **47 kHz**.
+  - Detailed timing reports show substantial setup (negative slack) margins, along with positive hold and pulse width slacks:
+    - **FIR Pipeline:**
+      - **Worst Negative Slack (WNS):** 21170.4 ns  
+      - **Worst Hold Slack (WHS):** 0.038 ns  
+      - **Worst Pulse Width Slack (WPWS):** 10637.468 ns
+    - **L=2 Parallel Processing:**
+      - **WNS:** 21168.154 ns  
+      - **WHS:** 0.044 ns  
+      - **WPWS:** 10637.468 ns
+    - **L=3 Parallel Processing:**
+      - **WNS:** 21166.473 ns  
+      - **WHS:** 0.024 ns  
+      - **WPWS:** 10637.468 ns
+    - **Combined Pipelined & L=3:**
+      - **WNS:** 21165.096 ns  
+      - **WHS:** 0.019 ns  
+      - **WPWS:** 10637.468 ns
+  - The high setup slack (WNS) indicates that each design meets the required timing constraints with significant headroom. Meanwhile, the small, yet positive hold slack values ensure reliable operation across all architectures. The consistent pulse width slack further confirms the robustness of the timing across the different implementations.
 - **Power Estimation:**
   - **Pipelined:** Negligible dynamic power (~0 μW) with leakage of ~8.22 μW.
   - **L=2 Architecture:** Total power ~29.51 μW.
