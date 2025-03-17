@@ -53,8 +53,7 @@ always @(posedge clk or negedge reset_n) begin
     if (!reset_n)
         data_out <= 0;
     else begin
-		  // Compute filter output
-        //data_out <= 0;
+	// Compute filter output
         data_out <= data_in * TAPS[0];
         for (i = 0; i < TAP_COUNT-1; i = i + 1) begin
             data_out <= data_out + delay[i] * TAPS[i+1];
