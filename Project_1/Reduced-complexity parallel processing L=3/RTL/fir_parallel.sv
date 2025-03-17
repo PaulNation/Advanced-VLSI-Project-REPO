@@ -54,11 +54,12 @@ always @(posedge clk or negedge reset_n) begin
         data_out <= 0;
     else begin
 		  // Compute filter output
-        data_out <= 0;
-        for (i = 0; i < TAP_COUNT; i = i + 1) begin
-            data_out <= data_out + delay[i] * TAPS[i];
+        //data_out <= 0;
+        data_out <= data_in * TAPS[0];
+        for (i = 0; i < TAP_COUNT-1; i = i + 1) begin
+            data_out <= data_out + delay[i] * TAPS[i+1];
         end
-	 end
+    end
 end
 
 endmodule
