@@ -25,7 +25,7 @@ reg signed [DATA_IN_WIDTH-1:0] delay [0:TAP_COUNT-1];
 // Each stage holds the running sum of products up to that tap.
 reg signed [DATA_OUT_WIDTH-1:0] pipeline [0:TAP_COUNT-1];
 
-integer i;
+integer i, j;
 
 //-----------------------------------------------------------
 // Delay Line (Shift Register)
@@ -46,18 +46,18 @@ end
 // Pipelined MAC Operation
 //-----------------------------------------------------------
 // Each stage j adds the product of delay[j] and taps[j] to the running sum.
-genvar j;
-generate
-    for (j = 0; j < TAP_COUNT; j = j + 1) begin : pipelined_stages
-        always @(posedge clk or negedge reset_n) begin
-            if (!reset_n)
-                pipeline[j] <= 0;
-            else
-                pipeline[j] <= (delay[j] * TAPS[j]);
-        end
-    end
-endgenerate
 
+always @(posedge clk or negedge reset_n) begin
+    if (!reset_n) begin
+	for (j = 0; j < TAP_COUNT; j = j + 1)
+		pipeline[j] <= 0;
+    end
+    else begin
+	pipeline[0] <=  data_in * taps[0];
+	for (j = 0; j < TAP_COUNT; j = j + 1)
+		pipeline[j+1] <= (delay[j] * TAPS[j+1]);
+    end
+end
 //-----------------------------------------------------------
 // Final Output Register
 //-----------------------------------------------------------
