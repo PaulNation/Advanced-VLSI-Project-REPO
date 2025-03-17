@@ -67,11 +67,11 @@ always @(posedge clk or negedge reset_n) begin
     if (!reset_n)
         data_out <= 0;
     else begin
-		  // Compute filter output
+	// Compute filter output
         data_out <= 0;
         for (i = 0; i < TAP_COUNT; i = i + 1) begin
             data_out <= data_out + pipeline[i];
         end
-	 end
+    end
 end
 endmodule
