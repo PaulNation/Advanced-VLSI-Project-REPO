@@ -1,0 +1,58 @@
+Information: Updating design information... (UID-85)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : iir_filter_pipelined
+Version: W-2024.09-SP2
+Date   : Thu Mar 27 14:17:04 2025
+****************************************
+
+
+Library(s) Used:
+
+    gscl45nm (File: /home/chome/nievep/Desktop/Synopsys Design Compiler/Final/src/gscl45nm.db)
+
+Information: The cells in your design are not characterized for internal power. (PWR-229)
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   0.0000 mW    (0%)
+  Net Switching Power  = 852.3872 nW  (100%)
+                         ---------
+Total Dynamic Power    = 852.3872 nW  (100%)
+
+Cell Leakage Power     =  18.1826 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
+register           0.0000            0.0000        1.2490e+04        1.2490e-02  (  65.62%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.0000        8.5239e-04        5.6921e+03        6.5444e-03  (  34.38%)
+--------------------------------------------------------------------------------------------------
+Total              0.0000 mW     8.5239e-04 mW     1.8183e+04 nW     1.9035e-02 mW
