@@ -1,10 +1,5 @@
-# Advanced VLSI Project Repository
+# 102-Tap FIR Filter Implementation
 
-This repository contains the source code, design files, and scripts for an advanced VLSI projects focused on implementing FIR filter architectures with reduced-complexity parallel processing techniques.
-
----
-
-## Abstract
 This Project demonstrates the design and implementation of a 102-tap low‐pass FIR filter. The design removes noise from a 1 kHz sine wave while meeting stringent specifications (a transition region between 0.2π and 0.23π rad/sample and at least 80 dB stopband attenuation). A combination of MATLAB, Python, and Verilog is used to develop and analyze multiple architectures—including traditional, pipelined, and parallel processing approaches—to achieve high performance on FPGA hardware.
 
 ---
@@ -19,7 +14,7 @@ This Project demonstrates the design and implementation of a 102-tap low‐pass 
 ### Simulation Setup
 
 - The noisy sine wave serves as the test input in FPGA simulation tools (e.g., ModelSim), allowing verification that the FIR filter removes noise while preserving the desired signal characteristics.
-![Test_Signal_Graph](Project_1/REPO_images/Test_Signal_Graph.png)
+![Test_Signal_Graph](REPO_images/Test_Signal_Graph.png)
 
 ---
 
@@ -27,7 +22,7 @@ This Project demonstrates the design and implementation of a 102-tap low‐pass 
 
 - **Frequency Response:** The ideal filter exhibits a clear passband with a steep transition. Post-quantization, minor deviations are observed; however, careful scaling and rounding ensure that the stopband attenuation remains at or above 80 dB.
 - **Quantization & Overflow Management:** Filter coefficients are quantized to a signed 32-bit representation. Additional techniques (proper scaling of inputs and intermediate registers during MAC operations) are implemented to prevent arithmetic overflow.
-![Frequency_Response](Project_1/REPO_images/Frequency_Response.png)
+![Frequency_Response](REPO_images/Frequency_Response.png)
 
 ---
 
@@ -37,14 +32,14 @@ This Project demonstrates the design and implementation of a 102-tap low‐pass 
 
 To balance performance and resource usage, several architectures were explored:
 - **Traditional (Direct) Architecture:** A simple multiply-accumulate (MAC) approach, easy to implement but with limited throughput.
-![DirectFIR](Project_1/REPO_images/DirectFIR.png)
+![DirectFIR](REPO_images/DirectFIR.png)
 - **Pipelined Architecture:** The MAC operation is divided into stages, which improves throughput by overlapping operations.
-![PipelinedFIR](Project_1/REPO_images/PipelinedFIR.png)
+![PipelinedFIR](REPO_images/PipelinedFIR.png)
 - **Parallel Processing Architectures:**
   - **L=2 Parallel Processing:** The filter coefficients are split into two sub-filters (even and odd indices) to effectively double the throughput.
-![L2FIR](Project_1/REPO_images/L2FIR.png)
+![L2FIR](REPO_images/L2FIR.png)
   - **L=3 Parallel Processing:** The filter is partitioned into three sub-filters, further increasing data rates.
-![L3FIR](Project_1/REPO_images/L3FIR.png)
+![L3FIR](REPO_images/L3FIR.png)
   - **Combined Pipelining and L=3:** This variant integrates pipelining within the L=3 structure to further reduce critical path delays and allow higher clock frequencies.
 
 ### Code Structure and Coefficient Processing
@@ -101,23 +96,23 @@ This section summarizes the key performance metrics and simulation outcomes:
 - **Simulation Validation:**  
   Simulation results confirm that the FIR filter effectively removes noise from the input sine wave while maintaining the required frequency response. Test bench outputs (graphs and waveform captures) validate that quantization effects remain minimal and the filter meets the design specifications.
 
-<figure style="background-color: white; display: inline-block; padding: 10px;">
-  <img src="Project_1/REPO_images/FIR_Pipelined_Results.png" alt="FIR Pipelined Results">
+<figure style="background-color: black; display: inline-block; padding: 10px;">
+  <img src="REPO_images/FIR_Pipelined_Results.png" alt="FIR Pipelined Results">
   <figcaption>Figure: FIR Pipelined Results</figcaption>
 </figure>
 
-<figure style="background-color: white; display: inline-block; padding: 10px;">
-  <img src="Project_1/REPO_images/FIR_L2_Results.png" alt="FIR L2 Results">
+<figure style="background-color: black; display: inline-block; padding: 10px;">
+  <img src="REPO_images/FIR_L2_Results.png" alt="FIR L2 Results">
   <figcaption>Figure: L=2 Parallel Processing Results</figcaption>
 </figure>
 
-<figure style="background-color: white; display: inline-block; padding: 10px;">
-  <img src="Project_1/REPO_images/FIR_L3_Results.png" alt="FIR L3 Results">
+<figure style="background-color: black; display: inline-block; padding: 10px;">
+  <img src="REPO_images/FIR_L3_Results.png" alt="FIR L3 Results">
   <figcaption>Figure: L=3 Parallel Processing Results</figcaption>
 </figure>
 
-<figure style="background-color: white; display: inline-block; padding: 10px;">
-  <img src="Project_1/REPO_images/FIR_L3_Pipeline_Results.png" alt="FIR L3 Pipeline Results">
+<figure style="background-color: black; display: inline-block; padding: 10px;">
+  <img src="REPO_images/FIR_L3_Pipeline_Results.png" alt="FIR L3 Pipeline Results">
   <figcaption>Figure: Combined Pipelined & L=3 Results</figcaption>
 </figure>
 
